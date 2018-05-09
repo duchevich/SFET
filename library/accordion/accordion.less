@@ -1,0 +1,22 @@
+.accordion {
+  margin-bottom: 50px;
+}
+
+.accordion--item {
+  text-align: center;
+}
+
+.accordion--head {
+  position: relative;
+  margin-top: 20px;
+  border-bottom: 1px solid @color-gray;
+}
+.accordion--title {
+  position: relative;
+  a {
+    display: block;
+    // if active:
+    &:not(.is-collapsed) {}
+  }
+}
+.accordion--body {}

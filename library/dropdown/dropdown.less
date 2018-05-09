@@ -1,0 +1,65 @@
+.dropdown {
+  position: relative;
+  &.is-open {
+    > .dropdown--menu {
+      display: block;
+    }
+    > a {
+      outline: 0;
+    }
+  }
+}
+.dropdown-dropup {
+  .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid ~"\9"; // IE8
+  }
+  .dropdown--menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+  }
+}
+
+.dropdown--toggle {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+.dropdown--menu {
+  z-index: 999;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  float: left;
+  min-width: 160px;
+  list-style: none;
+  text-align: left;
+  background-clip: padding-box;
+  li {
+    a {
+      display: inline-block;
+      clear: both;
+      white-space: nowrap;
+    }
+  }
+}
+.dropdown--menu-right {
+  left: auto;
+  right: 0;
+}
+
+.dropdownBackdrop { // If mobile we use a backdrop because click events don't delegate
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 989;
+}

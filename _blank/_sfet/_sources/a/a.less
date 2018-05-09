@@ -1,0 +1,10 @@
+.a, a {
+  color: @color-info;
+  text-decoration: none;
+  border-bottom: 1px solid fade(@color-info, 30%);
+  transition: all @transition-duration ease;
+  &:hover,
+  &:focus {
+    border-color: fade(@color-info, 75%);
+  }
+}

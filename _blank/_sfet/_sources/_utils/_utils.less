@@ -1,0 +1,198 @@
+.u-clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.u-pull-right {
+  float: right !important;
+}
+.u-pull-left {
+  float: left !important;
+}
+
+.u-list-clean {
+  margin: 0;
+  padding: 0;
+  > li {
+    list-style: none;
+  }
+}
+.u-list-inline {
+  font-size: 0;
+  line-height: 0;
+  > li {
+    vertical-align: top;
+    display: inline-block;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+  }
+}
+
+.u-overText {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.u-srOnly { // Use to hide text intended only for screen readers
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+
+// --- Responsive utilities
+
+.responsive-visibility() {
+  display: block !important;
+  table& {
+    display: table !important;
+  }
+  tr& {
+    display: table-row !important;
+  }
+  th&, td& {
+    display: table-cell !important;
+  }
+}
+.responsive-invisibility() {
+  display: none !important;
+}
+
+.u-visible-xs,
+.u-visible-sm,
+.u-visible-md,
+.u-visible-lg {
+  .responsive-invisibility();
+}
+
+.u-visible-xs-block,
+.u-visible-xs-inline,
+.u-visible-xs-inlineBlock,
+.u-visible-sm-block,
+.u-visible-sm-inline,
+.u-visible-sm-inlineBlock,
+.u-visible-md-block,
+.u-visible-md-inline,
+.u-visible-md-inlineBlock,
+.u-visible-lg-block,
+.u-visible-lg-inline,
+.u-visible-lg-inlineBlock {
+  display: none !important;
+}
+
+.u-visible-xs {
+  @media (max-width: @screen-xs-max) {
+    .responsive-visibility();
+  }
+}
+.u-visible-xs-block {
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+}
+.u-visible-xs-inline {
+  @media (max-width: @screen-xs-max) {
+    display: inline !important;
+  }
+}
+.u-visible-xs-inlineBlock {
+  @media (max-width: @screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+.u-visible-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility();
+  }
+}
+.u-visible-sm-block {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: block !important;
+  }
+}
+.u-visible-sm-inline {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline !important;
+  }
+}
+.u-visible-sm-inlineBlock {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+.u-visible-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility();
+  }
+}
+.u-visible-md-block {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: block !important;
+  }
+}
+.u-visible-md-inline {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline !important;
+  }
+}
+.u-visible-md-inlineBlock {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+.u-visible-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility();
+  }
+}
+.u-visible-lg-block {
+  @media (min-width: @screen-lg-min) {
+    display: block !important;
+  }
+}
+.u-visible-lg-inline {
+  @media (min-width: @screen-lg-min) {
+    display: inline !important;
+  }
+}
+.u-visible-lg-inlineBlock {
+  @media (min-width: @screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+.u-hidden-xs {
+  @media (max-width: @screen-xs-max) {
+    .responsive-invisibility();
+  }
+}
+.u-hidden-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-invisibility();
+  }
+}
+.u-hidden-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-invisibility();
+  }
+}
+.u-hidden-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-invisibility();
+  }
+}

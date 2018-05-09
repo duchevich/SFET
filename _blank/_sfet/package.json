@@ -1,0 +1,25 @@
+{
+  "name": "SFET",
+  "description": "Seniorro Front-End Toolkit",
+  "version": "0.5.0",
+  "author": "Seniorro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/seniorro/front-end"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "fs": "^0.0.1-security",
+    "gulp-if": "^2.0.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-less": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-watch": "^4.2.4",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0"
+  }
+}

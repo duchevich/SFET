@@ -1,0 +1,17 @@
+.btn {
+  border-radius: @border-radius;
+  border: 0;
+  text-decoration: none;
+  background: @color-brand;
+  color: @color-dark;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 10px 20px;
+  transition: all @transition-duration ease;
+  &:hover {
+    background: darken(@color-brand, 4%);
+  }
+  &:active {
+    background: darken(@color-brand, 8%);
+  }
+}

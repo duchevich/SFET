@@ -1,0 +1,52 @@
+.alert {
+  overflow: hidden;
+  border-radius: @border-radius;
+  padding: 25px 20px;
+}
+
+.alert-constant {
+  display: none;
+}
+.alert-notify {
+  position: fixed;
+  padding-left: 32px;
+  top: 30px;
+  right: 30px;
+  margin-left: 30px;
+  width: 300px;
+  background: @color-failure;
+  color: @color-light;
+  font-size: 14px;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 8px;
+    background: fade(@color-dark, 20%);
+  }
+}
+
+.alert--title {}
+.alert--close {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: none;
+  border: 0;
+  color: fade(@color-light, 70%);
+  font-size: 20px;
+  transition: all @transition-duration ease;
+  &:hover,
+  &:focus {
+    color: @color-light;
+  }
+}

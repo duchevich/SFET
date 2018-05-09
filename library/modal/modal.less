@@ -1,0 +1,96 @@
+@modal--dialog-lg-width: 900px;
+@modal--dialog-md-width: 460px;
+@modal--dialog-sm-width: 300px;
+
+.modal {
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  &.is-fade {
+    .modal--dialog {
+      transform: translate3d(0, -25%, 0);
+      transition: transform 0.3s ease-out;
+    }
+  }
+  &.is-in {
+    .modal--dialog {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.modal--dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+  @media (min-width: @screen-sm-min) {
+    width: @modal--dialog-md-width;
+    margin: 30px auto;
+  }
+}
+.modal--dialog-lg {
+  @media (min-width: @screen-md-min) {
+    width: @modal--dialog-lg-width;
+  }
+}
+.modal--dialog-sm {
+  @media (min-width: @screen-sm-min) {
+    width: @modal--dialog-sm-width;
+  }
+}
+
+.modal--inner {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+  background: @color-light;
+}
+.modal--header {
+  h3 {}
+}
+.modal--body {
+  position: relative;
+}
+
+.no-js {
+  .modal {
+    z-index: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: block;
+  }
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: fade(@color-dark, 75%);
+  &.is-fade {
+    opacity: 0;
+  }
+  &.is-in {
+    opacity: 1;
+  }
+}
+.modalScrollbarMeasure { // Measure scrollbar width for padding body during modal show/hide
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
