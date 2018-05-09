@@ -2,11 +2,26 @@
   "name": "SFET",
   "description": "Seniorro Front-End Toolkit",
   "version": "0.5.0",
-  "author": "Seniorro",
   "license": "MIT",
+  "keywords": [
+    "css",
+    "less",
+    "bem",
+    "gulp",
+    "bootstrap",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "https://seniorro.com/sfet",
+  "author": "https://seniorro.com/sfet#authors",
+  "contributors": [
+    "Seniorro"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/seniorro/front-end"
+    "url": "https://github.com/Seniorro/SFET"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -7,4 +7,11 @@
         $(this).blur(); // Defocus links and buttons after click
     });
 
+    bem.setConfig({
+        namePrefix: '',
+        elemPrefix: '--',
+        modPrefix: '-',
+        modDlmtr: '-'
+    });
+
 })(jQuery);
