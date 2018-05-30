@@ -1,0 +1,36 @@
+@-ms-viewport {
+  width: device-width;
+}
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: lighten(@color-brand, 15%);
+  color: fade(@color-light, 80%);
+  text-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: inherit;
+}
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a, button {
+  outline: 0;
+}

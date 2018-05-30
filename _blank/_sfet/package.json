@@ -2,7 +2,11 @@
   "name": "SFET",
   "description": "Seniorro Front-End Toolkit",
   "version": "0.5.0",
-  "license": "MIT",
+  "homepage": "https://seniorro.com/sfet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Seniorro/SFET"
+  },
   "keywords": [
     "css",
     "less",
@@ -14,15 +18,14 @@
     "framework",
     "web"
   ],
-  "homepage": "https://seniorro.com/sfet",
-  "author": "https://seniorro.com/sfet#authors",
+  "authors": {
+    "name": "Dmitry Pripa",
+    "email": "i@dpripa.com"
+  },
+  "license": "MIT",
   "contributors": [
     "Seniorro"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Seniorro/SFET"
-  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "fs": "^0.0.1-security",

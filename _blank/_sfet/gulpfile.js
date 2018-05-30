@@ -23,21 +23,10 @@ var gulp = require('gulp'),
 
         // Consistently parsing the blocks and forming a paths.
         for (var b = 0; b < _declaration.length; b++) {
-            var b_path = '_sources/' + _declaration[b].n + '/';
+            var b_path = '_blocks/' + _declaration[b].n + '/';
 
             // Forming a simple list of the blocks for subsequent verifications.
             b_list.push(_declaration[b].n);
-
-            // Checking blocks dependencies.
-            var require = _declaration[b].r;
-            if (require !== undefined) {
-                for (var r = 0; r < require.length; r++) {
-                    // If there are unmet dependencies.
-                    if (b_list.indexOf(require[r]) === -1) {
-                        console.error('Warning!', 'Unmet dependency "' + require[r] + '" for "' + _declaration[b].n + '" or she included below block!')
-                    }
-                }
-            }
 
             // Checking blocks vendors.
             var vendors = _declaration[b].v;

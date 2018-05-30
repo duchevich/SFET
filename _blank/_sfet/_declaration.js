@@ -3,12 +3,13 @@
 
 module.exports = [
     {n:'_vars'},
-    {n:'_bases', v:['html5shiv', 'respond', 'placeholders', 'bs.transition', 'normalize', 'jquery.bem']},
     {n:'act'},
+    {n:'_base', v:['html5shiv', 'respond', 'placeholders', 'bs.transition', 'normalize']},
     {n:'_utils'},
+    {n:'page'},
     {n:'container'},
-    {n:'col'},
-    {n:'row'},
+    {n:'grid'},
+    {n:'a'},
     {n:'icon'},
     {n:'header'},
     {n:'footer'},
