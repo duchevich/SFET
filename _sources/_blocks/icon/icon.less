@@ -1,14 +1,16 @@
+@icon-ff: iconfont;
+
 @font-face {
-  font-family: 'iconfont';
-  src: url('iconfont/iconfont.eot');
-  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
-  url('iconfont/iconfont.woff') format('woff'),
-  url('iconfont/iconfont.ttf') format('truetype'),
-  url('iconfont/iconfont.svg#iconfontregular') format('svg');
+  font-family: '@{icon-ff}';
+  src: url('fonts/@{icon-ff}.eot');
+  src: url('fonts/@{icon-ff}.eot?#iefix') format('embedded-opentype'),
+  url('fonts/@{icon-ff}.woff') format('woff'),
+  url('fonts/@{icon-ff}.ttf') format('truetype'),
+  url('fonts/@{icon-ff}.svg#@{icon-ff}regular') format('svg');
 }
 
 .icon {
-  font-family: 'iconfont' !important;
+  font-family: '@{icon-ff}' !important;
   font-weight: normal !important;
   font-style: normal !important;
   &._example:before {

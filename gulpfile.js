@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     less = require('gulp-less'),
     inject = require('gulp-inject-string'),
+    strip = require('gulp-strip-css-comments'),
     concat = require('gulp-concat'),
     autoPrefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
@@ -21,7 +22,7 @@ var gulp = require('gulp'),
 
     b_scripts, b_styles,
     parseBlocks = function () {
-        b_scripts = [_config.sources.path + '_variables/_variables.js']; b_styles = [];
+        b_scripts = [_config.sources.path + '/_variables/_variables.js']; b_styles = [];
         var b_list = [];
 
         // Consistently parsing the blocks and forming a paths.
@@ -92,6 +93,9 @@ var gulp = require('gulp'),
                 cascade: false
             }))
             .pipe(concat(_config.build.styles.name + '.css'))
+            .pipe(strip({
+                preserve: false
+            }))
             .pipe(csso({
                 restructure: !_config.build.sourceMaps
             }))
@@ -109,7 +113,7 @@ gulp.task('default', function () {
     });
 
     gulp.watch(_config.sources.path + '_blocks/**/*.js', ['scripts']);
-    gulp.watch([_config.sources.path + '_blocks/**/*.less'], ['styles']);
+    gulp.watch(_config.sources.path + '_blocks/**/*.less', ['styles']);
 
     gulp.watch([
         _config.build.path + '/' + _config.build.scripts.name + '.js',
