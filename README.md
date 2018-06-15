@@ -21,7 +21,7 @@ SFET - это стек технологий для разработки front-en
 ## Файловая структура
 - `_src/`
     - `blocks/` - коллекция проектных блоков.
-        - `{blockName}\`
+        - `{blockName}/`
             - `vendors/`
             - `{blockName}.js`
             - `{blockName}.less`
