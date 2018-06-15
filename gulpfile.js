@@ -21,12 +21,12 @@ var gulp = require('gulp'),
 
     b_scripts, b_styles,
     parseBlocks = function () {
-        b_scripts = ['_variables/_variables.js']; b_styles = [];
+        b_scripts = [_config.sources.path + '_variables/_variables.js']; b_styles = [];
         var b_list = [];
 
         // Consistently parsing the blocks and forming a paths.
         for (var b = 0; b < _declaration.length; b++) {
-            var b_path = '_blocks/' + _declaration[b].n + '/';
+            var b_path = _config.sources.path +  '/_blocks/' + _declaration[b].n + '/';
 
             // Forming a simple list of the blocks for subsequent verifications.
             b_list.push(_declaration[b].n);
@@ -81,7 +81,10 @@ var gulp = require('gulp'),
 
     compileStyles = function () {
         gulp.src(b_styles)
-            .pipe(inject.prepend('@import "_variables/_variables.less"; @import "_mixins/_mixins.less";'))
+            .pipe(inject.prepend(
+                '@import "' + _config.sources.path + '/_variables/_variables.less"; ' +
+                '@import "' + _config.sources.path + '/_mixins/_mixins.less";'
+            ))
             .pipe(trigger(_config.build.sourceMaps, sourcemaps.init()))
             .pipe(less())
             .pipe(autoPrefixer({
@@ -105,8 +108,8 @@ gulp.task('default', function () {
         open: false
     });
 
-    gulp.watch('_blocks/**/*.js', ['scripts']);
-    gulp.watch(['_blocks/**/*.less'], ['styles']);
+    gulp.watch(_config.sources.path + '_blocks/**/*.js', ['scripts']);
+    gulp.watch([_config.sources.path + '_blocks/**/*.less'], ['styles']);
 
     gulp.watch([
         _config.build.path + '/' + _config.build.scripts.name + '.js',

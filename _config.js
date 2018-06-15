@@ -9,9 +9,12 @@ module.exports = {
         proxy: 'http://127.0.0.1:8000',
         port: 3013
     },
+    sources: {
+        path: '_sources'
+    },
     build: {
         sourceMaps: true, // Warning! Disable source mapping for the production!
-        path: '../static',
+        path: 'dist/static',
         scripts: {
             name: 'scripts.min',
             mangleExcept: ['$'] // Array of not-distorting global variables.
@@ -21,7 +24,7 @@ module.exports = {
             autoPrefixer: ['> 1%', 'last 2 versions']
         },
         tpl: {
-            path: '../**/*.php'
+            path: 'dist/**/*.php'
         }
     }
 };
