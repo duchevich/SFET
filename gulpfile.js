@@ -22,7 +22,7 @@ var gulp = require('gulp'),
 
     b_scripts, b_styles,
     parseBlocks = function () {
-        b_scripts = [_config.sources.path + '/variables/variables.js']; b_styles = [];
+        b_scripts = [_config.sources.path + '/variables.js']; b_styles = [];
         var b_list = [];
 
         // Consistently parsing the blocks and forming a paths.
@@ -83,8 +83,8 @@ var gulp = require('gulp'),
     compileStyles = function () {
         gulp.src(b_styles)
             .pipe(inject.prepend(
-                '@import "' + _config.sources.path + '/variables/variables.less"; ' +
-                '@import "' + _config.sources.path + '/mixins/mixins.less";'
+                '@import "' + _config.sources.path + '/variables.less"; ' +
+                '@import "' + _config.sources.path + '/mixins.less";'
             ))
             .pipe(trigger(_config.build.sourceMaps, sourcemaps.init()))
             .pipe(less())
