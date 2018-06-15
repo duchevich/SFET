@@ -1,7 +1,7 @@
 {
   "name": "SFET",
   "description": "Seniorro Front-End Toolkit",
-  "version": "0.6.0-alpha",
+  "version": "0.8.0",
   "homepage": "https://sfet.seniorro.com",
   "repository": {
     "type": "git",
