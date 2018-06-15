@@ -10,7 +10,7 @@ module.exports = {
         port: 3013
     },
     sources: {
-        path: '_sources'
+        path: '_src'
     },
     build: {
         sourceMaps: true, // Warning! Disable source mapping for the production!
