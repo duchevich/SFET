@@ -1,4 +1,6 @@
-// --- SFET Gulpfile
+/*
+--- SFET Gulpfile
+ */
 
 var gulp = require('gulp'),
     fs = require('fs'),
@@ -33,10 +35,12 @@ var gulp = require('gulp'),
             if (vendors !== undefined) {
                 for (var v = 0; v < vendors.length; v++) {
                     var v_path_script =  b_path + 'vendors/' + vendors[v] + '.js',
-                        v_path_style = b_path + 'vendors/' + vendors[v] + '.less';
-                    if (fs.existsSync(v_path_script) === true || fs.existsSync(v_path_style) === true) {
-                        if (fs.existsSync(v_path_script) === true) b_scripts.push(v_path_script);
-                        if (fs.existsSync(v_path_style) === true) b_styles.push(v_path_style);
+                        v_path_style = b_path + 'vendors/' + vendors[v] + '.less',
+                        v_path_script_check = fs.existsSync(v_path_script),
+                        v_path_style_check = fs.existsSync(v_path_style);
+                    if (v_path_script_check === true || v_path_style_check === true) {
+                        if (v_path_script_check === true) b_scripts.push(v_path_script);
+                        if (v_path_style_check === true) b_styles.push(v_path_style);
                     } else {
                         console.error('Warning! Сould not be found vendor "' + vendors[v] + '" file(s) for block "' + _declaration[b].n + '"!')
                     }
@@ -99,13 +103,15 @@ gulp.task('default', function () {
         open: false
     });
 
-    gulp.watch('_sources/**/*.js', ['scripts']);
-    gulp.watch(['_sources/**/*.less'], ['styles']);
+    gulp.watch('_blocks/**/*.js', ['scripts'], function (done) {
+        console.log(done)
+    });
+    gulp.watch(['_blocks/**/*.less'], ['styles']);
 
     gulp.watch([
         _config.build.path + '/' + _config.build.scripts.name + '.js',
         _config.build.path + '/' + _config.build.styles.name + '.css',
-        _config.build.templates.path
+        _config.build.tpl.path
     ], browserSync.reload);
 });
 

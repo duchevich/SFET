@@ -1,5 +1,7 @@
-// --- SFET Declaration
-// n - name, v - vendors
+/*
+--- SFET Declaration
+n - name, v - vendors
+*/
 
 module.exports = [
     {n:'_vars'},

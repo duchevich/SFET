@@ -1,22 +1,26 @@
-// --- SFET General Config
+/*
+--- SFET Config
+ */
 
 module.exports = {
     server: {
-        proxy: 'http://127.0.0.1:8000', // false - if not used external local server
+        /*  Take to false a "proxy" option if do not need to proxy to
+            a local server (eg, you use usual html as templates). */
+        proxy: 'http://127.0.0.1:8000',
         port: 3013
     },
     build: {
-        sourceMaps: true, // Warning! Disable source mapping for production!
+        sourceMaps: true, // Warning! Disable source mapping for the production!
         path: '../static',
         scripts: {
             name: 'scripts.min',
-            mangleExcept: ['$'] // Array of not-distorting global variables
+            mangleExcept: ['$'] // Array of not-distorting global variables.
         },
         styles: {
             name: 'styles.min',
             autoPrefixer: ['> 1%', 'last 2 versions']
         },
-        templates: {
+        tpl: {
             path: '../**/*.php'
         }
     }

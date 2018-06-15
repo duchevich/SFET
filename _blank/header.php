@@ -27,11 +27,10 @@
     <meta name="apple-mobile-web-app-title" content="html">
     <meta name="application-name" content="html">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="static/styles.min.css">
 </head>
 <body class="page act">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
-<link rel="stylesheet" href="static/styles.min.css">
-
 <img id="act-pageLoad" class="act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
 <div id="act-pageFade" class="act-pageFade"></div>
 <a id="act-ofl" class="act-ofl" data-act="pager">Check internet connection and click to retry</a>

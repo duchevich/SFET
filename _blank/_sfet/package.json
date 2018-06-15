@@ -2,10 +2,10 @@
   "name": "SFET",
   "description": "Seniorro Front-End Toolkit",
   "version": "0.5.0",
-  "homepage": "https://seniorro.com/sfet",
+  "homepage": "https://sfet.seniorro.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Seniorro/SFET"
+    "url": "https://github.com/seniorro/sfet"
   },
   "keywords": [
     "css",
@@ -20,7 +20,7 @@
   ],
   "authors": {
     "name": "Dmitry Pripa",
-    "email": "i@dpripa.com"
+    "email": "ceo@seniorro.com"
   },
   "license": "MIT",
   "contributors": [
