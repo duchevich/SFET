@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglifyjs'),
     sourcemaps = require('gulp-sourcemaps'),
     less = require('gulp-less'),
+    inject = require('gulp-inject-string'),
     concat = require('gulp-concat'),
     autoPrefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
@@ -20,7 +21,7 @@ var gulp = require('gulp'),
 
     b_scripts, b_styles,
     parseBlocks = function () {
-        b_scripts = []; b_styles = [];
+        b_scripts = ['_variables/_variables.js']; b_styles = [];
         var b_list = [];
 
         // Consistently parsing the blocks and forming a paths.
@@ -80,13 +81,14 @@ var gulp = require('gulp'),
 
     compileStyles = function () {
         gulp.src(b_styles)
+            .pipe(inject.prepend('@import "_variables/_variables.less"; @import "_mixins/_mixins.less";'))
             .pipe(trigger(_config.build.sourceMaps, sourcemaps.init()))
-            .pipe(concat(_config.build.styles.name + '.less'))
             .pipe(less())
             .pipe(autoPrefixer({
                 browsers: _config.build.styles.autoPrefixer,
                 cascade: false
             }))
+            .pipe(concat(_config.build.styles.name + '.css'))
             .pipe(csso({
                 restructure: !_config.build.sourceMaps
             }))
@@ -103,9 +105,7 @@ gulp.task('default', function () {
         open: false
     });
 
-    gulp.watch('_blocks/**/*.js', ['scripts'], function (done) {
-        console.log(done)
-    });
+    gulp.watch('_blocks/**/*.js', ['scripts']);
     gulp.watch(['_blocks/**/*.less'], ['styles']);
 
     gulp.watch([

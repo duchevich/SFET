@@ -8,8 +8,8 @@
             ofl = '#act-ofl',
             ofl_timeout;
 
-        $(pageLoad).fadeOut(_vars.transition_duration, function () {
-            $(pageFade).fadeOut(_vars.transition_duration);
+        $(pageLoad).fadeOut(_v.trd, function () {
+            $(pageFade).fadeOut(_v.trd);
         });
         
         $(document).on('click', 'a[data-act]',function (e) {
@@ -21,22 +21,22 @@
 
                 if (act === 'pager') {
                     if (navigator.onLine || navigator.onLine === undefined) {
-                        $(pageFade).fadeIn(_vars.transition_duration, function () {
+                        $(pageFade).fadeIn(_v.trd, function () {
                             window.location.href = href
                         });
                     } else {
                         clearTimeout(ofl_timeout);
                         $(ofl).attr('href', href);
-                        $(ofl).fadeIn(_vars.transition_duration);
+                        $(ofl).fadeIn(_v.trd);
                         ofl_timeout = setTimeout(function() {
-                            $(ofl).fadeOut(_vars.transition_duration)
+                            $(ofl).fadeOut(_v.trd)
                         }, 5000)
                     }
                 }
 
                 if (act === 'anchor') {
                     var top = $(href).offset().top;
-                    $('html, body').animate({scrollTop: top}, _vars.transition_duration * 2)
+                    $('html, body').animate({scrollTop: top}, _v.trd * 2)
                 }
         });
 

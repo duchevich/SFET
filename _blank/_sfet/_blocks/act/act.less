@@ -15,7 +15,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: @color-light;
+  background: @v-clr-light;
 }
 
 .act-ofl {
@@ -27,18 +27,18 @@
   width: calc(~"100% - 40px");
   max-width: 340px;
   padding: 14px 20px;
-  background: @color-failure;
-  color: @color-light;
+  background: @v-clr-fail;
+  color: @v-clr-light;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: all @transition-duration ease;
+  transition: all @v-trd ease;
   &:hover {
-    background: darken(@color-failure, 15%);
+    background: darken(@v-clr-fail, 15%);
   }
   &:focus {
-    background: darken(@color-failure, 30%);
+    background: darken(@v-clr-fail, 30%);
   }
 }
 

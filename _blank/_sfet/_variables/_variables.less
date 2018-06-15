@@ -1,0 +1,43 @@
+// --- Fonts
+@v-ff: 'Open Sans', sans-serif;
+@v-fz: 16; //px
+@v-lh: normal;
+
+// --- Colours
+@v-clr: yellow;
+@v-clr-success: #03733D;
+@v-clr-fail: #FE294F;
+@v-clr-info: #253EE7;
+@v-clr-light: #fff;
+@v-clr-dark: #1B1918;
+@v-clr-gray: #f5f5f5;
+@v-clr-gray-2: #D9D9D9;
+
+// --- Other base properties
+@v-trd: .3s;
+@v-br: 5px;
+
+// --- Media queries breakpoints
+@v-scr-xs: 480px;
+@v-scr-sm: 768px;
+@v-scr-md: 992px;
+@v-scr-lg: 1200px;
+@v-scr-xs-min: @v-scr-xs;
+@v-scr-sm-min: @v-scr-sm;
+@v-scr-md-min: @v-scr-md;
+@v-scr-lg-min: @v-scr-lg;
+@v-scr-xs-max: (@v-scr-sm-min - 1);
+@v-scr-sm-max: (@v-scr-md-min - 1);
+@v-scr-md-max: (@v-scr-lg-min - 1);
+
+// --- Grid settings
+@v-grid-cols: 12;
+@v-grid-gutter: 30px;
+
+// --- Container sizes
+@v-grid-tab: (720px + @v-grid-gutter);
+@v-grid-desk: (940px + @v-grid-gutter);
+@v-grid-desk-lg: (1140px + @v-grid-gutter);
+@v-grid-sm: @v-grid-tab;
+@v-grid-md: @v-grid-desk;
+@v-grid-lg: @v-grid-desk-lg;

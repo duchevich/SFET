@@ -11,14 +11,18 @@
 body {
   position: relative;
   overflow-x: hidden;
+  font-family: @v-ff;
+  font-size: @v-fz;
+  line-height: @v-lh;
+  color: @v-clr-dark;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: lighten(@color-brand, 15%);
-  color: fade(@color-light, 80%);
+  background: lighten(@v-clr, 15%);
+  color: fade(@v-clr-light, 80%);
   text-shadow: none;
 }
 

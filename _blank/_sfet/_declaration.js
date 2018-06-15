@@ -4,11 +4,9 @@ n - name, v - vendors
 */
 
 module.exports = [
-    {n:'_vars'},
     {n:'act'},
-    {n:'_base', v:['html5shiv', 'respond', 'placeholders', 'bs.transition', 'normalize']},
-    {n:'_utils'},
-    {n:'page'},
+    {n:'_bases', v:['html5shiv', 'respond', 'placeholders', 'bs.transition', 'normalize']},
+    {n:'_utilities'},
     {n:'container'},
     {n:'grid'},
     {n:'a'},
