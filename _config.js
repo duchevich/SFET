@@ -7,7 +7,7 @@ module.exports = {
         /*  Take to false a "proxy" option if do not need to proxy to
             a local server (eg, you use usual html as templates). */
         proxy: 'http://127.0.0.1:8000',
-        port: 3013
+        port: 3010
     },
     sources: {
         path: '_src'
