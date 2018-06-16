@@ -1,0 +1,27 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: @v-grid-gutter / 2;
+  padding-right: @v-grid-gutter / 2;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  @media (min-width: @v-scr-sm-min) {
+    width: @v-grid-sm;
+  }
+  @media (min-width: @v-scr-md-min) {
+    width: @v-grid-md;
+  }
+  @media (min-width: @v-scr-lg-min) {
+    width: @v-grid-lg;
+  }
+  &._fluid {
+    width: 100%;
+    max-width: 1440px;
+  }
+}
