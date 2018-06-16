@@ -17,8 +17,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     del = require('del'),
 
-    _config = require('./_config'),
-    _declaration = require('./_declaration'),
+    _config = require('./config'),
+    _declaration = require('./declaration'),
 
     b_scripts, b_styles,
     parseBlocks = function () {

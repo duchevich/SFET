@@ -10,11 +10,11 @@ module.exports = {
         port: 3010
     },
     sources: {
-        path: '_src'
+        path: 'blank'
     },
     build: {
         sourceMaps: true, // Warning! Disable source mapping for the production!
-        path: 'dist/static',
+        path: 'blank/static',
         scripts: {
             name: 'scripts.min',
             mangleExcept: ['$'] // Array of not-distorting global variables.
@@ -24,7 +24,7 @@ module.exports = {
             autoPrefixer: ['> 1%', 'last 2 versions']
         },
         tpl: {
-            path: 'dist/**/*.php'
+            path: 'blank/**/*.php'
         }
     }
 };
