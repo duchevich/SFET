@@ -50,10 +50,11 @@ SFET - это стек технологий для разработки front-en
 Система именования SFET организована основываясь на методологии БЭМ.
 
 ### Полезное чтиво
-- [Быстрый старт](https://ru.bem.info/methodology/quick-start/)
-- [Основные понятия](https://ru.bem.info/methodology/key-concepts/)
-- [Соглашение по именованию](https://ru.bem.info/methodology/naming-convention/)
-- [CSS по БЭМ](https://ru.bem.info/methodology/css/)
+- Официальная документация БЕМ
+    - [Быстрый старт](https://ru.bem.info/methodology/quick-start/)
+    - [Основные понятия](https://ru.bem.info/methodology/key-concepts/)
+    - [Соглашение по именованию](https://ru.bem.info/methodology/naming-convention/)
+    - [CSS по БЭМ](https://ru.bem.info/methodology/css/)
 - [Неофициальная краткая документация БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/)
 
 ### Спецификация
