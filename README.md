@@ -67,7 +67,7 @@ SFET - это стек технологий для разработки front-en
 
 ## Быстрый старт
 - [Скачай](https://github.com/Seniorro/SFET/archive/master.zip) или склонируй репозиторий: `git clone https://github.com/Seniorro/SFET.git`.
-- У тебя должены быть установлены [Node.js](https://nodejs.org/) и [PHP](http://php.net/downloads.php).
+- У тебя должны быть установлены [Node.js](https://nodejs.org/) и [PHP](http://php.net/downloads.php).
 - Установи зависимости из `package.json`: `npm install`.
 - Запусти [встроенный веб-сервер CLI SAPI](http://php.net/manual/ru/features.commandline.webserver.php) в директории `dist/`: `cd dist && php -S 127.0.0.1:8000`
 - Используй такси Gulp:
@@ -83,4 +83,4 @@ SFET - это стек технологий для разработки front-en
 - Найти замену блоку grid.
 
 ## Копирайт и лицензия
-© 2017-2018 [Seniorro](https://seniorro.com). Код опубликован за лицензией [MIT License](https://github.com/Seniorro/SFET/blob/master/LICENSE).
+© 2017-2018 [Seniorro](https://seniorro.com). Код опубликован за лицензией [MIT](https://github.com/Seniorro/SFET/blob/master/LICENSE).
