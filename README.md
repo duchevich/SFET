@@ -44,7 +44,7 @@ SFET - это стек технологий для разработки front-en
 - `_config.js` - файл конфигурации SFET.
 - `_declaration.js`  - декрарация в которой нужно указывать блоки проекта, можно контролировать очередь загрузки css и js.
 - `gulpfile.js`  - файл конфигурации системы сборки Gulp (обычно не требует никакого вмешательства, вноси изминения исключительно зная что делаешь и на свой страх и риск).
-- `package.json` и `package-lock.json` - файлы пакетного менеджера npm.
+- `package.json` и `package-lock.json` - файлы пакетного менеджера NPM.
 
 ## Соглашение об именовании
 Система именования SFET организована основываясь на методологии БЭМ.
@@ -67,8 +67,9 @@ SFET - это стек технологий для разработки front-en
 
 ## Быстрый старт
 - [Скачай](https://github.com/Seniorro/SFET/archive/master.zip) или склонируй репозиторий: `git clone https://github.com/Seniorro/SFET.git`.
+- У тебя должены быть установлены [Node.js](https://nodejs.org/) и [PHP](http://php.net/downloads.php).
 - Установи зависимости из `package.json`: `npm install`.
-- Запусти php-сервер в директории `dist/`: `cd dist && php -S 127.0.0.1:8000`
+- Запусти [встроенный веб-сервер CLI SAPI](http://php.net/manual/ru/features.commandline.webserver.php) в директории `dist/`: `cd dist && php -S 127.0.0.1:8000`
 - Используй такси Gulp:
     - `gulp` (`gulp default`)
     - `gulp build`
