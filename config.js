@@ -17,7 +17,7 @@ module.exports = {
         path: 'blank/static',
         scripts: {
             name: 'scripts.min',
-            mangleExcept: ['$'] // Array of not-distorting global variables.
+            mangleExcept: ['$', 'jQuery'] // Array of not-distorting global variables.
         },
         styles: {
             name: 'styles.min',
