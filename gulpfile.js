@@ -27,7 +27,7 @@ var gulp = require('gulp'),
 
         // Consistently parsing the blocks and forming a paths.
         for (var b = 0; b < _declaration.length; b++) {
-            var b_path = _config.sources.path +  '/blocks/' + _declaration[b].n + '/';
+            var b_path = _config.sources.path +  '/' + _declaration[b].n + '/';
 
             // Forming a simple list of the blocks for subsequent verifications.
             b_list.push(_declaration[b].n);
@@ -112,8 +112,8 @@ gulp.task('default', function () {
         open: false
     });
 
-    gulp.watch(_config.sources.path + 'blocks/**/*.js', ['scripts']);
-    gulp.watch(_config.sources.path + 'blocks/**/*.less', ['styles']);
+    gulp.watch(_config.sources.path + '/**/*.js', ['scripts']);
+    gulp.watch(_config.sources.path + '/**/*.less', ['styles']);
 
     gulp.watch([
         _config.build.path + '/' + _config.build.scripts.name + '.js',
