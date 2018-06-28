@@ -28,13 +28,13 @@
     <meta name="application-name" content="html">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
-    <link rel="stylesheet" href="static/styles.min.css">
+    <link rel="stylesheet" href="static/common.min.css">
 </head>
-<body class="page act">
-<img id="act-pageLoad" class="act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
-<div id="act-pageFade" class="act-pageFade"></div>
-<a id="act-ofl" class="act-ofl" data-act="pager">Check internet connection and click to retry</a>
+<body class="sb-act">
+<img class="sb-act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
+<div class="sb-act-pageFade"></div>
+<a class="sb-act-ofl" data-sb-act="pager">Check internet connection and click to retry</a>
 
-<header class="header">
-    <div class="container"></div>
+<header class="sb-header">
+    <div class="sb-container"></div>
 </header>

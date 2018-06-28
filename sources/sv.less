@@ -1,0 +1,46 @@
+/*
+--- SFET Global Less variables collection
+*/
+
+// --- Fonts
+@sv-ff: 'Open Sans', sans-serif;
+@sv-fz: 16px; //px
+
+// --- Colours
+@sv-clr: yellow;
+@sv-clr-success: #03733D;
+@sv-clr-fail: #FE294F;
+@sv-clr-info: #253EE7;
+@sv-clr-light: #fff;
+@sv-clr-dark: #1B1918;
+@sv-clr-gray: #f5f5f5;
+@sv-clr-gray-2: #D9D9D9;
+
+// --- Other base properties
+@sv-trd: .3s;
+@sv-br: 5px;
+
+// --- Media queries breakpoints
+@sv-scr-xs: 480px;
+@sv-scr-sm: 768px;
+@sv-scr-md: 992px;
+@sv-scr-lg: 1200px;
+@sv-scr-xs-min: @sv-scr-xs;
+@sv-scr-sm-min: @sv-scr-sm;
+@sv-scr-md-min: @sv-scr-md;
+@sv-scr-lg-min: @sv-scr-lg;
+@sv-scr-xs-max: (@sv-scr-sm-min - 1);
+@sv-scr-sm-max: (@sv-scr-md-min - 1);
+@sv-scr-md-max: (@sv-scr-lg-min - 1);
+
+// --- Grid settings
+@sv-grid-cols: 12;
+@sv-grid-gutter: 30px;
+
+// --- Container sizes
+@sv-grid-tab: (720px + @sv-grid-gutter);
+@sv-grid-desk: (940px + @sv-grid-gutter);
+@sv-grid-desk-lg: (1140px + @sv-grid-gutter);
+@sv-grid-sm: @sv-grid-tab;
+@sv-grid-md: @sv-grid-desk;
+@sv-grid-lg: @sv-grid-desk-lg;
