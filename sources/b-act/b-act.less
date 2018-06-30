@@ -1,4 +1,4 @@
-.sb-act {
+.b-act {
 
   &-pageLoad {
     z-index: 99999;
@@ -15,7 +15,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: @sv-clr-light;
+    background: @v-clr-light;
   }
 
   &-ofl {
@@ -27,24 +27,24 @@
     width: calc(~"100% - 40px");
     max-width: 340px;
     padding: 14px 20px;
-    background: @sv-clr-fail;
-    color: @sv-clr-light;
-    font-size: @sv-fz;
+    background: @v-clr-fail;
+    color: @v-clr-light;
+    font-size: @v-fz;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: all @sv-trd ease;
+    transition: all @v-trd ease;
     &:hover {
-      background: darken(@sv-clr-fail, 15%);
+      background: darken(@v-clr-fail, 15%);
     }
     &:active {
-      background: darken(@sv-clr-fail, 30%);
+      background: darken(@v-clr-fail, 30%);
     }
   }
 }
 
 .no-js {
-  .sb-act {
+  .b-act {
     &-pageLoad,
     &-pageFade {
       display: none !important;

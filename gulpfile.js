@@ -22,7 +22,7 @@ var gulp = require('gulp'),
 
     s_scripts, s_styles,
     parseSources = function () {
-        s_scripts = [_config.sources.path + '/sv.js']; s_styles = [];
+        s_scripts = [_config.sources.path + '/variables.js']; s_styles = [];
         var s_list = [];
 
         // Consistently parsing the blocks and forming a paths.
@@ -83,7 +83,7 @@ var gulp = require('gulp'),
     compileStyles = function () {
         gulp.src(s_styles)
             .pipe(inject.prepend(
-                '@import "' + _config.sources.path + '/sv.less";'
+                '@import "' + _config.sources.path + '/variables.less";'
             ))
             .pipe(strip({
                 preserve: false

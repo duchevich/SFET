@@ -2,7 +2,7 @@
 --- SFET Global JS variables collection
 */
 
-const _SV = {
+const _V = {
     TRD: 300,
     SCR_XS_MIN: 480,
     SCR_SM_MIN: 768,

@@ -3,40 +3,40 @@
 
     if ($('.sb-act').length === 1) {
 
-        const pageLoad = $('.sb-act-pageLoad'),
-                pageFade = $('.sb-act-pageFade'),
-                ofl = $('.sb-act-ofl');
+        const pageLoad = $('.b-act-pageLoad'),
+                pageFade = $('.b-act-pageFade'),
+                ofl = $('.b-act-ofl');
         var ofl_timeout;
 
-        pageLoad.fadeOut(_SV.TRD, function () {
-            pageFade.fadeOut(_SV.TRD);
+        pageLoad.fadeOut(_V.TRD, function () {
+            pageFade.fadeOut(_V.TRD);
         });
         
-        $(document).on('click', 'a[data-sb-act]',function (e) {
+        $(document).on('click', 'a[data-b-act]',function (e) {
             e.preventDefault();
 
             const link = $(this),
-                act = link.data('sb-act'),
+                act = link.data('b-act'),
                 href = link.attr('href');
 
                 if (act === 'pager') {
                     if (navigator.onLine || navigator.onLine === undefined) {
-                        $(pageFade).fadeIn(_SV.TRD, function () {
+                        $(pageFade).fadeIn(_V.TRD, function () {
                             window.location.href = href
                         });
                     } else {
                         clearTimeout(ofl_timeout);
                         ofl.attr('href', href);
-                        ofl.fadeIn(_SV.TRD);
+                        ofl.fadeIn(_V.TRD);
                         ofl_timeout = setTimeout(function() {
-                            ofl.fadeOut(_SV.TRD)
+                            ofl.fadeOut(_V.TRD)
                         }, 5000);
                     }
                 }
 
                 if (act === 'anchor') {
                     const top = $(href).offset().top;
-                    $('html, body').animate({scrollTop: top}, _SV.TRD * 2)
+                    $('html, body').animate({scrollTop: top}, _V.TRD * 2)
                 }
         });
 

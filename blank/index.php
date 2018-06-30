@@ -1,13 +1,13 @@
 <?php include 'header.php' ?>
-<section class="sb-section">
-    <div class="sb-section-container sb-container ss-fluid">
+<section class="b-section">
+    <div class="b-section-container b-container m-fluid">
         <a href="#" data-sb-act="pager">link</a>
-        <div class="sb-grid">
-            <div class="sb-grid-col ss-md-6">
+        <div class="b-grid">
+            <div class="b-grid-col m-md-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aut consequatur, cumque deleniti dolores doloribus eligendi et expedita facere fugiat maxime mollitia pariatur quas quisquam, unde voluptate voluptatibus! Commodi?
             </div>
         </div>
     </div>
 </section>
-<section class="sb-section"></section>
+<section class="b-section"></section>
 <?php include 'footer.php' ?>

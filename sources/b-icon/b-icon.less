@@ -1,0 +1,19 @@
+@ff: iconfont;
+
+@font-face {
+  font-family: '@{ff}';
+  src: url('fonts/@{ff}.eot');
+  src: url('fonts/@{ff}.eot?#iefix') format('embedded-opentype'),
+  url('fonts/@{ff}.woff') format('woff'),
+  url('fonts/@{ff}.ttf') format('truetype'),
+  url('fonts/@{ff}.svg#@{ff}regular') format('svg');
+}
+
+.b-icon {
+  font-family: '@{ff}' !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  &.m-example:before {
+    content: '\e900';
+  }
+}
