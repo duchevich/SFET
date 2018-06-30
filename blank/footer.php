@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="container"></div>
+<footer class="b-footer">
+    <div class="b-container"></div>
 </footer>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

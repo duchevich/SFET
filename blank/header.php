@@ -30,11 +30,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="static/common.min.css">
 </head>
-<body class="sb-act">
-<img class="sb-act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
-<div class="sb-act-pageFade"></div>
-<a class="sb-act-ofl" data-sb-act="pager">Check internet connection and click to retry</a>
+<body class="b-act">
+<img class="b-act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
+<div class="b-act-pageFade"></div>
+<a class="b-act-ofl" data-sb-act="pager">Check internet connection and click to retry</a>
 
-<header class="sb-header">
-    <div class="sb-container"></div>
+<header class="b-header">
+    <div class="b-container"></div>
 </header>
