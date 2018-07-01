@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <script>document.documentElement.className=document.documentElement.className.replace('no-js','')</script>
+
     <title>html</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -18,7 +19,7 @@
     <meta property="fb:page_id" content="">
     <link rel="alternate" hreflang="ru" href="/ru" title="Russian">
     <link rel="alternate" hreflang="en" href="/" title="English">
-    <link type="text/plain" rel="author" href="/humans.txt">
+
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
@@ -27,10 +28,12 @@
     <meta name="apple-mobile-web-app-title" content="html">
     <meta name="application-name" content="html">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="static/common.min.css">
 </head>
 <body class="b-act">
+
 <img class="b-act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
 <div class="b-act-pageFade"></div>
 <a class="b-act-ofl" data-sb-act="pager">Check internet connection and click to retry</a>
