@@ -148,7 +148,7 @@ SFET позволяет настроить ряд опций в файле `conf
 
 
 ## Авторы
-- Dmitry Pripa - ceo@seniorro.com
+- Dmitry Pripa - i@dpripa.com
 
 
 ## Копирайт и лицензия
