@@ -10,8 +10,8 @@ module.exports = {
         port: 3010,
         tpl: 'blank/**/*.php'
     },
-    sources: {
-        path: 'sources'
+    components: {
+        path: 'components'
     },
     build: {
         sourceMaps: true, // Warning! Disable source mapping for the production!
