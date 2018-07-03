@@ -10,18 +10,13 @@ module.exports = {
         port: 3010,
         tpl: 'blank/**/*.php'
     },
-    components: {
-        path: 'components'
-    },
-    build: {
+    dist: 'blank/static',
+    src: {
         sourceMaps: true, // Warning! Disable source mapping for the production!
-        path: 'blank/static',
         scripts: {
-            name: 'common.min',
             mangleExcept: ['$', 'jQuery'] // Array of not-distorting global variables.
         },
         styles: {
-            name: 'common.min',
             autoPrefixer: ['> 1%', 'last 2 versions']
         }
     }

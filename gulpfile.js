@@ -72,13 +72,13 @@ var gulp = require('gulp'),
 
     compileScripts = function () {
         gulp.src(c_scripts)
-            .pipe(uglify(_config.build.scripts.name + '.js', {
-                outSourceMap: _config.build.sourceMaps,
+            .pipe(uglify(_config.build.scripts.name + '.js', { // !!!
+                outSourceMap: _config.src.sourceMaps,
                 mangle: {
-                    except: _config.build.scripts.mangleExcept
+                    except: _config.src.scripts.mangleExcept
                 }
             })).on('error', function () {})
-            .pipe(gulp.dest(_config.build.path))
+            .pipe(gulp.dest(_config.build.path)) // !!!
     },
 
     compileStyles = function () {
@@ -89,25 +89,25 @@ var gulp = require('gulp'),
             .pipe(strip({
                 preserve: false
             }))
-            .pipe(trigger(_config.build.sourceMaps, sourcemaps.init()))
+            .pipe(trigger(_config.src.sourceMaps, sourcemaps.init()))
             .pipe(less())
             .pipe(autoPrefixer({
-                browsers: _config.build.styles.autoPrefixer,
+                browsers: _config.src.styles.autoPrefixer,
                 cascade: false
             }))
-            .pipe(concat(_config.build.styles.name + '.css'))
+            .pipe(concat(_config.src.styles.name + '.css')) // !!!
             .pipe(csso({
-                restructure: !_config.build.sourceMaps
+                restructure: !_config.src.sourceMaps
             }))
-            .pipe(trigger(_config.build.sourceMaps, sourcemaps.write()))
-            .pipe(gulp.dest(_config.build.path))
+            .pipe(trigger(_config.src.sourceMaps, sourcemaps.write()))
+            .pipe(gulp.dest(_config.build.path)) // !!!
     },
 
     delBuild = function (callback) {
         del([
-            _config.build.path + '/*' + _config.build.scripts.name + '.js',
-            _config.build.path + '/*' + _config.build.scripts.name + '.js.map',
-            _config.build.path + '/*' + _config.build.styles.name + '.css'
+            _config.build.path + '/*' + _config.build.scripts.name + '.js', // !!!
+            _config.build.path + '/*' + _config.build.scripts.name + '.js.map', // !!!
+            _config.build.path + '/*' + _config.build.styles.name + '.css' // !!!
         ], {force: true}, callback)
     };
 
@@ -120,15 +120,16 @@ gulp.task('default', function () {
         open: false
     });
 
-    var watchScrips = gulp.watch(_config.components.path + '/**/*.js', ['scripts']);
-    watchScrips.on('change', function (file) {
-        console.log(path.parse(file.path).name)
-    });
-    gulp.watch(_config.components.path + '/**/*.less', ['styles']);
+    // var watchScrips =
+    gulp.watch(_config.components.path + '/**/*.js', ['scripts']); // !!!
+    // watchScrips.on('change', function (file) {
+    //     console.log(path.parse(file.path).name)
+    // });
+    gulp.watch(_config.components.path + '/**/*.less', ['styles']); // !!!
 
     gulp.watch([
-        _config.build.path + '/' + _config.build.scripts.name + '.js',
-        _config.build.path + '/' + _config.build.styles.name + '.css',
+        _config.build.path + '/' + _config.build.scripts.name + '.js', // !!!
+        _config.build.path + '/' + _config.build.styles.name + '.css', // !!!
         _config.watch.tpl
     ], browserSync.reload);
 });
