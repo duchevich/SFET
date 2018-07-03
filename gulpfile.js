@@ -3,6 +3,7 @@
  */
 
 var gulp = require('gulp'),
+    path = require('path'),
     fs = require('fs'),
     trigger = require('gulp-if'),
     uglify = require('gulp-uglifyjs'),
@@ -119,13 +120,16 @@ gulp.task('default', function () {
         open: false
     });
 
-    gulp.watch(_config.components.path + '/**/*.js', ['scripts']);
+    var watchScrips = gulp.watch(_config.components.path + '/**/*.js', ['scripts']);
+    watchScrips.on('change', function (file) {
+        console.log(path.parse(file.path).name)
+    });
     gulp.watch(_config.components.path + '/**/*.less', ['styles']);
 
     gulp.watch([
         _config.build.path + '/' + _config.build.scripts.name + '.js',
         _config.build.path + '/' + _config.build.styles.name + '.css',
-        _config.build.watch.tpl
+        _config.watch.tpl
     ], browserSync.reload);
 });
 
