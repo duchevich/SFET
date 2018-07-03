@@ -8,8 +8,8 @@
                 ofl = $('.b-act-ofl');
         var ofl_timeout;
 
-        pageLoad.fadeOut(_V.TRD, function () {
-            pageFade.fadeOut(_V.TRD);
+        pageLoad.fadeOut(_G.TRD, function () {
+            pageFade.fadeOut(_G.TRD);
         });
         
         $(document).on('click', 'a[data-b-act]',function (e) {
@@ -21,22 +21,22 @@
 
                 if (act === 'pager') {
                     if (navigator.onLine || navigator.onLine === undefined) {
-                        $(pageFade).fadeIn(_V.TRD, function () {
+                        $(pageFade).fadeIn(_G.TRD, function () {
                             window.location.href = href
                         });
                     } else {
                         clearTimeout(ofl_timeout);
                         ofl.attr('href', href);
-                        ofl.fadeIn(_V.TRD);
+                        ofl.fadeIn(_G.TRD);
                         ofl_timeout = setTimeout(function() {
-                            ofl.fadeOut(_V.TRD)
+                            ofl.fadeOut(_G.TRD)
                         }, 5000);
                     }
                 }
 
                 if (act === 'anchor') {
                     const top = $(href).offset().top;
-                    $('html, body').animate({scrollTop: top}, _V.TRD * 2)
+                    $('html, body').animate({scrollTop: top}, _G.TRD * 2)
                 }
         });
 

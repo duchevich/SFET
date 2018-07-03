@@ -24,15 +24,15 @@
     min-height: 1px;
     width: 100%;
     float: left;
-    padding-left:  (@v-grid-gutter / 2);
-    padding-right: (@v-grid-gutter / 2);
+    padding-left:  (@g-grid-gutter / 2);
+    padding-right: (@g-grid-gutter / 2);
   }
 }
 
 // --- Grid Framework (Based on Bootstrap 3.3.7)
 
 // Creates a wrapper for a series of columns
-.make-row(@gutter: @v-grid-gutter) {
+.make-row(@gutter: @g-grid-gutter) {
   margin-left:  ceil((@gutter / -2));
   margin-right: floor((@gutter / -2));
   &:before,
@@ -47,104 +47,104 @@
 
 // Generating Columns
 .make-grid(xs);
-@media (min-width: @v-scr-sm-min) {
+@media (min-width: @g-scr-sm-min) {
   .make-grid(sm);
 }
-@media (min-width: @v-scr-md-min) {
+@media (min-width: @g-scr-md-min) {
   .make-grid(md);
 }
-@media (min-width: @v-scr-lg-min) {
+@media (min-width: @g-scr-lg-min) {
   .make-grid(lg);
 }
 
 // Generate the extra small columns
-.make-xs-column(@columns; @gutter: @v-grid-gutter) {
-  width: percentage((@columns / @v-grid-cols));
+.make-xs-column(@columns; @gutter: @g-grid-gutter) {
+  width: percentage((@columns / @g-grid-cols));
 }
 .make-xs-column-offset(@columns) {
-  margin-left: percentage((@columns / @v-grid-cols));
+  margin-left: percentage((@columns / @g-grid-cols));
 }
 .make-xs-column-push(@columns) {
-  left: percentage((@columns / @v-grid-cols));
+  left: percentage((@columns / @g-grid-cols));
 }
 .make-xs-column-pull(@columns) {
-  right: percentage((@columns / @v-grid-cols));
+  right: percentage((@columns / @g-grid-cols));
 }
 
 // Generate the small columns
-.make-sm-column(@columns; @gutter: @v-grid-gutter) {
-  @media (min-width: @v-scr-sm-min) {
-    width: percentage((@columns / @v-grid-cols));
+.make-sm-column(@columns; @gutter: @g-grid-gutter) {
+  @media (min-width: @g-scr-sm-min) {
+    width: percentage((@columns / @g-grid-cols));
   }
 }
 .make-sm-column-offset(@columns) {
-  @media (min-width: @v-scr-sm-min) {
-    margin-left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-sm-min) {
+    margin-left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-sm-column-push(@columns) {
-  @media (min-width: @v-scr-sm-min) {
-    left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-sm-min) {
+    left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-sm-column-pull(@columns) {
-  @media (min-width: @v-scr-sm-min) {
-    right: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-sm-min) {
+    right: percentage((@columns / @g-grid-cols));
   }
 }
 
 // Generate the medium columns
-.make-md-column(@columns; @gutter: @v-grid-gutter) {
-  @media (min-width: @v-scr-md-min) {
-    width: percentage((@columns / @v-grid-cols));
+.make-md-column(@columns; @gutter: @g-grid-gutter) {
+  @media (min-width: @g-scr-md-min) {
+    width: percentage((@columns / @g-grid-cols));
   }
 }
 .make-md-column-offset(@columns) {
-  @media (min-width: @v-scr-md-min) {
-    margin-left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-md-min) {
+    margin-left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-md-column-push(@columns) {
-  @media (min-width: @v-scr-md-min) {
-    left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-md-min) {
+    left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-md-column-pull(@columns) {
-  @media (min-width: @v-scr-md-min) {
-    right: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-md-min) {
+    right: percentage((@columns / @g-grid-cols));
   }
 }
 
 // Generate the large columns
-.make-lg-column(@columns; @gutter: @v-grid-gutter) {
-  @media (min-width: @v-scr-lg-min) {
-    width: percentage((@columns / @v-grid-cols));
+.make-lg-column(@columns; @gutter: @g-grid-gutter) {
+  @media (min-width: @g-scr-lg-min) {
+    width: percentage((@columns / @g-grid-cols));
   }
 }
 .make-lg-column-offset(@columns) {
-  @media (min-width: @v-scr-lg-min) {
-    margin-left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-lg-min) {
+    margin-left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-lg-column-push(@columns) {
-  @media (min-width: @v-scr-lg-min) {
-    left: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-lg-min) {
+    left: percentage((@columns / @g-grid-cols));
   }
 }
 .make-lg-column-pull(@columns) {
-  @media (min-width: @v-scr-lg-min) {
-    right: percentage((@columns / @v-grid-cols));
+  @media (min-width: @g-scr-lg-min) {
+    right: percentage((@columns / @g-grid-cols));
   }
 }
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
   .b-grid-col.m-@{class}-@{index} {
-    width: percentage((@index / @v-grid-cols));
+    width: percentage((@index / @g-grid-cols));
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
   .b-grid-col.m-@{class}-push-@{index} {
-    left: percentage((@index / @v-grid-cols));
+    left: percentage((@index / @g-grid-cols));
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
@@ -154,7 +154,7 @@
 }
 .calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
   .b-grid-col.m-@{class}-pull-@{index} {
-    right: percentage((@index / @v-grid-cols));
+    right: percentage((@index / @g-grid-cols));
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
@@ -164,7 +164,7 @@
 }
 .calc-grid-column(@index, @class, @type) when (@type = offset) {
   .b-grid-col.m-@{class}-offset-@{index} {
-    margin-left: percentage((@index / @v-grid-cols));
+    margin-left: percentage((@index / @g-grid-cols));
   }
 }
 
@@ -177,8 +177,8 @@
 
 // Create grid for specific class
 .make-grid(@class) {
-  .loop-grid-columns(@v-grid-cols, @class, width);
-  .loop-grid-columns(@v-grid-cols, @class, pull);
-  .loop-grid-columns(@v-grid-cols, @class, push);
-  .loop-grid-columns(@v-grid-cols, @class, offset);
+  .loop-grid-columns(@g-grid-cols, @class, width);
+  .loop-grid-columns(@g-grid-cols, @class, pull);
+  .loop-grid-columns(@g-grid-cols, @class, push);
+  .loop-grid-columns(@g-grid-cols, @class, offset);
 }

@@ -1,0 +1,46 @@
+/*
+--- SFET Global Less variables collection
+*/
+
+// --- Fonts
+@g-ff: 'Open Sans', sans-serif;
+@g-fz: 16px; //px
+
+// --- Colours
+@g-clr: yellow;
+@g-clr-success: #03733D;
+@g-clr-fail: #FE294F;
+@g-clr-info: #253EE7;
+@g-clr-light: #fff;
+@g-clr-dark: #1B1918;
+@g-clr-gray: #f5f5f5;
+@g-clr-gray-2: #D9D9D9;
+
+// --- Other base properties
+@g-trd: .3s;
+@g-br: 5px;
+
+// --- Media queries breakpoints
+@g-scr-xs: 480px;
+@g-scr-sm: 768px;
+@g-scr-md: 992px;
+@g-scr-lg: 1200px;
+@g-scr-xs-min: @g-scr-xs;
+@g-scr-sm-min: @g-scr-sm;
+@g-scr-md-min: @g-scr-md;
+@g-scr-lg-min: @g-scr-lg;
+@g-scr-xs-max: (@g-scr-sm-min - 1);
+@g-scr-sm-max: (@g-scr-md-min - 1);
+@g-scr-md-max: (@g-scr-lg-min - 1);
+
+// --- Grid settings
+@g-grid-cols: 12;
+@g-grid-gutter: 30px;
+
+// --- Container sizes
+@g-grid-tab: (720px + @g-grid-gutter);
+@g-grid-desk: (940px + @g-grid-gutter);
+@g-grid-desk-lg: (1140px + @g-grid-gutter);
+@g-grid-sm: @g-grid-tab;
+@g-grid-md: @g-grid-desk;
+@g-grid-lg: @g-grid-desk-lg;

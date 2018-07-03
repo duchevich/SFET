@@ -22,7 +22,7 @@ var gulp = require('gulp'),
 
     c_scripts, c_styles,
     parseComponents = function () {
-        c_scripts = ['./variables.js']; c_styles = [];
+        c_scripts = ['./globals.js']; c_styles = [];
         var c_list = [];
 
         // Consistently parsing the blocks and forming a paths.
@@ -83,7 +83,7 @@ var gulp = require('gulp'),
     compileStyles = function () {
         gulp.src(c_styles)
             .pipe(inject.prepend(
-                '@import "./variables.less";'
+                '@import "./globals.less";'
             ))
             .pipe(strip({
                 preserve: false

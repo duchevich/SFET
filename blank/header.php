@@ -36,7 +36,7 @@
 
 <img class="b-act-pageLoad" title="Page is loading..." alt="Page is loading..." src="static/images/loading-default.svg">
 <div class="b-act-pageFade"></div>
-<a class="b-act-ofl" data-sb-act="pager">Check internet connection and click to retry</a>
+<a class="b-act-ofl" data-b-act="pager">Check internet connection and click to retry</a>
 
 <header class="b-header">
     <div class="b-container"></div>

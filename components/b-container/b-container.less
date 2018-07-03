@@ -1,8 +1,8 @@
 .b-container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: @v-grid-gutter / 2;
-  padding-right: @v-grid-gutter / 2;
+  padding-left: @g-grid-gutter / 2;
+  padding-right: @g-grid-gutter / 2;
   &:before,
   &:after {
     content: '';
@@ -11,14 +11,14 @@
   &:after {
     clear: both;
   }
-  @media (min-width: @v-scr-sm-min) {
-    width: @v-grid-sm;
+  @media (min-width: @g-scr-sm-min) {
+    width: @g-grid-sm;
   }
-  @media (min-width: @v-scr-md-min) {
-    width: @v-grid-md;
+  @media (min-width: @g-scr-md-min) {
+    width: @g-grid-md;
   }
-  @media (min-width: @v-scr-lg-min) {
-    width: @v-grid-lg;
+  @media (min-width: @g-scr-lg-min) {
+    width: @g-grid-lg;
   }
   &.m-fluid {
     width: 100%;
